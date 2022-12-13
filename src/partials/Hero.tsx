@@ -4,13 +4,14 @@ import {
   HeroSocial,
   Section,
 } from 'astro-boilerplate-components';
+import "./Hero.css"
 
 const Hero = () => (
   <Section>
     <HeroAvatar
       title={
         <>
-          Hi there, I'm <GradientText>Preeti</GradientText> 👋
+          Hi there, I'm <GradientText>Preeti</GradientText> <span className="wave">👋</span>
         </>
       }
       description={
@@ -28,26 +29,25 @@ const Hero = () => (
       }
       socialButtons={
         <>
-          {/* open in new tab */}
           <a href="https://twitter.com/dashly1993" target="_blank">
             <HeroSocial
               src="/assets/images/twitter-icon.png"
               alt="Twitter icon"
             />
           </a>
-          <a href="/">
+          <a href="/" target="_blank">
             <HeroSocial
               src="/assets/images/facebook-icon.png"
               alt="Facebook icon"
             />
           </a>
-          <a href="/">
+          <a href="/" target="_blank">
             <HeroSocial
               src="/assets/images/linkedin-icon.png"
               alt="Linkedin icon"
             />
           </a>
-          <a href="/">
+          <a href="/" target="_blank">
             <HeroSocial
               src="/assets/images/youtube-icon.png"
               alt="Youtube icon"
