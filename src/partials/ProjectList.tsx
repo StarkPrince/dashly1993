@@ -72,6 +72,7 @@ const ProjectList = ({}) =>
           description={
             project.description.length > 400 ? project.description.substring(0, 400) + "..." : project.description
           }
+          key={project.name}
           link={project.link}
           img={{
             src: project.image.src,
@@ -80,7 +81,7 @@ const ProjectList = ({}) =>
           category={
             <>
               {project.categories.map((category: any) => (
-                <Tags color={ColorTags.ROSE}>
+                <Tags color={ColorTags.ROSE} key={category.name}>
                   {category.name}
                 </Tags>
               ))}
